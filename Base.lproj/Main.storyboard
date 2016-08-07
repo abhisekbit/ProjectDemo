@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Home" id="BYZ-38-t0r" customClass="HomeViewController" customModule="ProjectDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MFP-Sf-8SD">
+                                <rect key="frame" x="0.0" y="92" width="375" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTableCell" id="StX-eM-u71" customClass="HomeTableCellTableViewCell" customModule="ProjectDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="StX-eM-u71" id="YM4-5I-HFx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9f2-NA-5rO">
+                                                    <rect key="frame" x="16" y="4" width="10" height="35"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biC-SL-N1R">
+                                                    <rect key="frame" x="34" y="11" width="261" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="biC-SL-N1R" firstAttribute="leading" secondItem="9f2-NA-5rO" secondAttribute="trailing" constant="8" id="3eT-5U-ACl"/>
+                                                <constraint firstItem="biC-SL-N1R" firstAttribute="leading" secondItem="YM4-5I-HFx" secondAttribute="leadingMargin" constant="18" id="FHb-yc-0gE"/>
+                                                <constraint firstItem="biC-SL-N1R" firstAttribute="top" secondItem="YM4-5I-HFx" secondAttribute="topMargin" constant="3" id="NcC-zT-rHe"/>
+                                                <constraint firstItem="9f2-NA-5rO" firstAttribute="bottom" secondItem="YM4-5I-HFx" secondAttribute="bottomMargin" constant="4" id="Nhd-h4-jAG"/>
+                                                <constraint firstItem="9f2-NA-5rO" firstAttribute="top" secondItem="YM4-5I-HFx" secondAttribute="top" constant="4" id="P1h-7B-JNV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="biC-SL-N1R" secondAttribute="trailing" constant="106" id="jjx-M9-8g0"/>
+                                                <constraint firstItem="biC-SL-N1R" firstAttribute="centerY" secondItem="YM4-5I-HFx" secondAttribute="centerY" id="mry-LD-m2B"/>
+                                                <constraint firstItem="9f2-NA-5rO" firstAttribute="leading" secondItem="YM4-5I-HFx" secondAttribute="leadingMargin" id="ou6-0w-izl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img_Home_color" destination="9f2-NA-5rO" id="gPH-hA-HgD"/>
+                                            <outlet property="lbl_HomeItem" destination="biC-SL-N1R" id="Rh4-WU-Enk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="VhR-sZ-yNV"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iWn-T0-PV8"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8N-Cc-h4G">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Demo Project" id="dlz-xh-bEZ"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N8N-Cc-h4G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Eff-9g-bhj"/>
+                            <constraint firstItem="N8N-Cc-h4G" firstAttribute="leading" secondItem="MFP-Sf-8SD" secondAttribute="leading" id="EgH-cf-3xX"/>
+                            <constraint firstAttribute="trailing" secondItem="N8N-Cc-h4G" secondAttribute="trailing" id="PXs-Mb-nCt"/>
+                            <constraint firstItem="N8N-Cc-h4G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d4C-wx-mtQ"/>
+                            <constraint firstItem="MFP-Sf-8SD" firstAttribute="top" secondItem="N8N-Cc-h4G" secondAttribute="bottom" constant="28" id="fs3-eA-UTS"/>
+                            <constraint firstItem="N8N-Cc-h4G" firstAttribute="trailing" secondItem="MFP-Sf-8SD" secondAttribute="trailing" id="pPz-em-O7X"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MFP-Sf-8SD" secondAttribute="bottom" constant="39" id="vbn-tW-Zdp"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="HomeTableView" destination="MFP-Sf-8SD" id="CSV-HI-GfW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487.5" y="185.5"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="qTu-t5-snS">
+            <objects>
+                <viewController title="Details" id="fbz-mp-xth" customClass="DetailsViewController" customModule="ProjectDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="agr-5R-Q1z"/>
+                        <viewControllerLayoutGuide type="bottom" id="oOC-8d-6qm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eap-CU-buo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aag-sT-Dwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935.5" y="328.5"/>
+        </scene>
+        <!--Graph-->
+        <scene sceneID="OE3-sa-a2a">
+            <objects>
+                <viewController title="Graph" id="mmm-Sg-PwB" customClass="GraphViewController" customModule="ProjectDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nwv-ZA-sXb"/>
+                        <viewControllerLayoutGuide type="bottom" id="JHF-pj-0pU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a5G-dr-klC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EH2-c2-9Cg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481.5" y="328.5"/>
+        </scene>
+    </scenes>
+</document>
